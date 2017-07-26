@@ -1,0 +1,16 @@
+{
+  "name": "quotemachine",
+  "version": "1.0.0",
+  "description": "generates random quotes",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tony Karanja",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "nightmare": "^2.10.0"
+  },
+  "devDependencies": {}
+}
