@@ -4,7 +4,7 @@ var _ = require('lodash')
 
 //var Quote = require('./models/quotes')
 
-// scrapePage()
+scrapePage()
 
 function scrapePage() {
   var url = 'https://www.brainyquote.com/'
@@ -37,7 +37,7 @@ function scrapePage() {
       data = potate
 
     });
-    // console.log(data);
+    console.log(data);
     return data
   });
   // console.log(data);
