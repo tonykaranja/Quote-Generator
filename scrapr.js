@@ -13,11 +13,12 @@ function scrapePage() {
     method: 'GET'
   }
 
-  var data = {}
+  //var data = {}
   //do the request with request
   request(url, function (err, res, body) {
     $ = cheerio.load(body);
-    list = $('#quotesList').html()
+    var potate;
+    // list = $('#quotesList').html()
     //console.log(list);
 
     $('#quotesList').each(function (i, html) {
@@ -32,16 +33,12 @@ function scrapePage() {
       })
 
       var parsedQuotes = _.merge({}, parsedText, parsedAuthor)
-      var potate =  parsedQuotes.get()
-      // console.log(potate);
-      data = potate
+      potate =  parsedQuotes.get()
 
     });
-    console.log(data);
-    return data
+    console.log(potate);
+    return potate
   });
-  // console.log(data);
-  return data
 }
 
 module.exports = scrapePage
