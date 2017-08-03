@@ -3,7 +3,7 @@ var Schema = mongoose.Schema
 
 var schema = new Schema({
   _id: Schema.Types.ObjectId
-  text: String,
+  quote: String,
   author: String
 })
 
