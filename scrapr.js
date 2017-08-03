@@ -13,32 +13,48 @@ function scrapePage() {
     method: 'GET'
   }
 
-  //var data = {}
-  //do the request with request
-  request(url, function (err, res, body) {
-    $ = cheerio.load(body);
-    var potate;
-    // list = $('#quotesList').html()
-    //console.log(list);
+  request(options, getCallback)
 
-    $('#quotesList').each(function (i, html) {
-      var parsedAuthor = $(html).find('a[title="view author"]').map(function(i, el) {
-        var author = $(this).html();
-        return { author: author }
-      })
+  function getCallback (err, res, body) {
+    if (err) {
+      console.log('Oops!', err);
+    } else {
+      console.log(res.statusCode)
+      if (res.statusCode === 200) {
+        startParsing(body)
+      } else {
+        console.log("Can't parse!");
+      }
+    }
 
-      var parsedText = $(html).find('a[title="view quote"]').map(function(i, el) {
-        var quote = $(this).html();
-        return { quote: quote }
-      })
+    function startParsing() {
+      $ = cheerio.load(body);
+      getQuotes($)
+    }
 
-      var parsedQuotes = _.merge({}, parsedText, parsedAuthor)
-      potate =  parsedQuotes.get()
+    function getQuotes(html) {
+      var potate;
 
-    });
-    console.log(potate);
-    return potate
-  });
+      $('#quotesList').each(function (i, html) {
+        var parsedAuthor = $(html).find('a[title="view author"]').map(function(i, el) {
+          var author = $(this).html();
+          return { author: author }
+        })
+
+        var parsedText = $(html).find('a[title="view quote"]').map(function(i, el) {
+          var quote = $(this).html();
+          return { quote: quote }
+        })
+
+        var parsedQuotes = _.merge({}, parsedText, parsedAuthor)
+        potate =  parsedQuotes.get()
+
+      });
+      
+      console.log(potate);
+      return potate
+    }
+  };
 }
 
 module.exports = scrapePage
