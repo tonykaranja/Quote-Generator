@@ -3,21 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>Quote Generator</title>
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+
   </head>
   <body>
-    <div class="">
-      <p>Random Quote Generator</p>
-    </div>
-    <div id="quote" class="">
-      <p>HEE HEE HEE!!!</p>
-    </div>
-    <div id="buttons" class="">
+    <div class="body-container">
+
       <div class="">
-        <button id="refresh" type="button" name="button"></button>
+        <p>Random Quote Generator</p>
       </div>
-      <div class="">
-        <button id="twita" type="button" name="button"></button>
+
+      <div id="quotes" class="">
+        <p id="quote-holder"> You are the sum of all your daily actions</p>
+        <p id="author-holder"> Bob globTrotter</p>
       </div>
+
+        <div class="">
+          <table id="quoteTable">
+
+          </table>
+        </div>
+
+      <div id="buttons" class="">
+        <div class="">
+          <button id="refresh" type="button" name="button"></button>
+        </div>
+
+        <div class="">
+          <button id="twita" type="button" name="button"></button>
+        </div>
+      </div>
+
     </div>
+
+    <script>
+      $(document).ready(function(){
+          $("#refresh").click(function(){
+              $.getJSON("quotes.json", function(data){
+                var quoteData = ''
+                $.each(data,function (key, value) {
+                  // console.log(data);
+                  // $.each(JSON.parse(data), function (key, value) {
+                  quoteData += '<tr>';
+                  quoteData += '<td>' + value.quote + '</td>'
+                  quoteData += '<td>' + value.author + '</td>'
+                  quoteData += '</tr>'
+                })
+                $('#quoteTable').append(quoteData)
+              });
+          });
+      });
+    </script>
   </body>
 </html>
