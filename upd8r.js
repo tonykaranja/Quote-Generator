@@ -1,14 +1,8 @@
 var scrapePage = require('./scrapr')
-//Updates the quotes array.
 
-var quotesArr = []
-
-function getter(scrapePage, (data, quotesArr) =>
-  scrapePage()
-  return data
-) {
-  console.log(data);
-  return data
-}
-
-getter()
+scrapePage.scrapePage(function (potate) {
+  // console.log('potatoes');
+   ret = potate
+  console.log(ret);
+  return ret
+})

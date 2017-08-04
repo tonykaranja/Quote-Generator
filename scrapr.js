@@ -4,9 +4,7 @@ var _ = require('lodash')
 
 //var Quote = require('./models/quotes')
 
-scrapePage()
-
-function scrapePage() {
+function scrapePage(callback) {
   var url = 'https://www.brainyquote.com/'
   var options = {
     url: url,
@@ -28,6 +26,7 @@ function scrapePage() {
     }
 
     function startParsing() {
+      console.log('parsing has started');
       $ = cheerio.load(body);
       getQuotes($)
     }
@@ -50,11 +49,16 @@ function scrapePage() {
         potate =  parsedQuotes.get()
 
       });
-      
-      console.log(potate);
-      return potate
+      // console.log(potate);
+      // foo(potate)
+      // console.log('returning potate');
+      callback(potate)
+      // return potate
     }
   };
 }
+// scrapePage()
 
-module.exports = scrapePage
+module.exports = {
+  scrapePage: scrapePage
+}
