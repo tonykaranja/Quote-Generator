@@ -1,1 +1,1 @@
-Project files for a FCC project
+Project files for a Free Code Camp project

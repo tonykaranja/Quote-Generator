@@ -17,13 +17,18 @@ function updater(file) {
   })
 }
 
-updater(file)
+// updater(file)
+
+module.exports = {
+  updater: updater
+}
 
 // var myJsonString = JSON.stringify(potate); //--json-like array
 // var myJsonString = Object.assign({}, potate);
-// array of objects or object of objects ? .. line#10
 
-// this one returns object object -->clear
+// array of objects or object of objects ?
+
+// this one returns object object -->
 // scrapePage.scrapePage(function (potate) {
 //   var myJsonString = Object.assign({}, potate);
 //   var xi = JSON.stringify(myJsonString) // ^ended up using them both
@@ -32,6 +37,5 @@ updater(file)
 //     if (err) throw err;
 //     console.log('Saved');
 //   })
-//
 //   return xi
 // })
