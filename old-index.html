@@ -42,8 +42,9 @@
           $("#refresh").click(function(){
               $.getJSON("quotes.json", function(data){
                 var quoteData = ''
+                console.log(data);
                 $.each(data,function (key, value) {
-                  // console.log(data);
+
                   // $.each(JSON.parse(data), function (key, value) {
                   quoteData += '<tr>';
                   quoteData += '<td>' + value.quote + '</td>'
@@ -51,6 +52,7 @@
                   quoteData += '</tr>'
                 })
                 $('#quoteTable').append(quoteData)
+                console.log(quoteData);
               });
           });
       });

@@ -31,6 +31,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'))
 
 app.use('/', index);
 app.use('/users', users);
@@ -41,10 +42,20 @@ app.get('/index',function(req,res){
   //__dirname : It will resolve to your project folder.
 });
 
+app.get('/index2',function(req,res){
+  res.sendFile(path.join(__dirname+'/old-index.html'));
+  //__dirname : It will resolve to your project folder.
+});
+
 app.get('/quotes.json',function(req,res){
   res.sendFile(path.join(__dirname+'/quotes.json'));
   //__dirname : It will resolve to your project folder.
 });
+
+// app.get('/main.css',function(req,res){
+//   res.sendFile(path.join(__dirname+'/main.css'));
+//   //__dirname : It will resolve to your project folder.
+// });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
