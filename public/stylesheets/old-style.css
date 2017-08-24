@@ -1,0 +1,61 @@
+body, html{
+  height:100%;
+  margin:0;
+  font-size:16px;
+  font-family:"Lato", sans-serif;
+  font-weight:400;
+  line-height:1.8em;
+  color:#666;
+}
+
+.bodi{
+  position:relative;
+  opacity:0.65;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  background-image:url('../images/beach-palms.jpg');
+  min-height:100%;
+
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment:fixed;
+}
+
+.ptext{
+  position: relative;
+  top:10%;
+  width:100%;
+  text-align: left;
+  color:#000;
+  font-size:27px;
+  letter-spacing:8px;
+  text-transform:uppercase;
+}
+.ptext .border{
+  /*background-color:#111;*/
+  /*color:#fff;*/
+  padding:20px;
+  background-color:transparent;
+}
+
+.quote-box {
+  border-radius:3px;
+  position:relative;
+  margin:8% auto auto auto;
+  width:450px;
+  padding:40px 50px;
+  display:table;
+  background-color:#fff;
+
+}
+
+div.stuff {
+  width: 450px;
+  margin:auto;
+  /*display:block;*/
+  /*position: center;  */
+}
