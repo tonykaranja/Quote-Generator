@@ -2,8 +2,6 @@ var request = require('request')
 var cheerio = require('cheerio')
 var _ = require('lodash')
 
-//var Quote = require('./models/quotes')
-
 function scrapePage(callback) {
   var url = 'https://www.brainyquote.com/'
   var options = {
@@ -32,7 +30,7 @@ function scrapePage(callback) {
     }
 
     function getQuotes(html) {
-      var potate;
+      var potate; //this variable holds the scraped data
 
       $('#quotesList').each(function (i, html) {
         var parsedAuthor = $(html).find('a[title="view author"]').map(function(i, el) {
@@ -49,11 +47,9 @@ function scrapePage(callback) {
         potate =  parsedQuotes.get()
 
       });
-      // console.log(potate);
-      // foo(potate)
-      // console.log('returning potate');
-      callback(potate)
-      // return potate
+
+      callback(potate);
+
     }
   };
 }
