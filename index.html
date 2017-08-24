@@ -24,17 +24,27 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <div class="bodi" style="width:100%;">
 
-    <div id="bodi" class="">
-      <div class="">
-        <div id="quotes" class="mySlides fade">
-          <p id="quote-holder" class="w3-large"> You are the sum of all your daily actions</p>
-          <p id="author-holder"> Bob globTrotter</p>
-        </div>
+      <div class="ptext">
+        <span class="border">
+          Quote Generator
+        </span>
       </div>
-      <div id="buttons" class="">
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div id="myCarousel" class="quote-box w3-display container">
+         <div id="things" class="carousel-inner">
+           <div class="quote-item active">
+             <p id="quote-holder"> You are the sum of all your daily actions</p>
+             <p id="author-holder"> Bob globTrotter</p>
+           </div>
+         </div>
+      </div>
+
+      <br>
+      <div class="">
+        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
       </div>
     </div>
 
