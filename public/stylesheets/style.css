@@ -63,7 +63,7 @@ body {
 }
 
 .quote-item {
-  /*display: none;*/
+  display: none;
   font-size: 1.75em;
   font-family: 'Shadows Into Light Two', cursive;
   color:#fff;

@@ -31,11 +31,6 @@ app.get('/',function(req,res){
   //__dirname : It will resolve to your project folder.
 });
 
-app.get('/index2',function(req,res){
-  res.sendFile(path.join(__dirname+'/fenix.html'));
-  //__dirname : It will resolve to your project folder.
-});
-
 app.get('/quotes.json',function(req,res){
   res.sendFile(path.join(__dirname+'/quotes.json'));
   //__dirname : It will resolve to your project folder.
