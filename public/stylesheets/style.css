@@ -1,5 +1,9 @@
 body, html {height: 100%; width:100%; margin:0; padding:0;}
 
+body {
+  font-size: 100%;
+}
+
 #myCarousel {
   object-fit: fill;
   position: absolute;
@@ -21,13 +25,13 @@ body, html {height: 100%; width:100%; margin:0; padding:0;}
 }
 
 .quote-box {
-  border-radius:3px;
-  position: inherit;
-  margin:20% auto 20% auto;
-  width:450px;
-  padding:50% 50px;
-  display:table;
-  background-color:#fff;
+  border-radius: 3px;
+  position: static;
+  margin: 20% auto 20% auto;
+  width: 450px;
+  padding: 50% 50px;
+  display: table;
+  background-color: inherit;
 
 }
 
@@ -35,13 +39,16 @@ body, html {height: 100%; width:100%; margin:0; padding:0;}
 
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/images/beach-palms.jpg");
-  min-height: 100%;
+  background-image: url("/images/flower-shower.jpeg");
+  /*min-height: 100%;*/
   background-attachment: fixed;
 }
 
 .quote-item {
   display: none;
+  font-size: 1.5em;
+  font-family: 'Shadows Into Light Two', cursive;
+  color:#fff;
 }
 
 /* On hover, add a black background color with a little bit see-through */
