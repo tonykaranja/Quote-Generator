@@ -15,8 +15,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/5657fffd42.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Shadows+Into+Light+Two" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/fenix.css">
 
   </head>
   <body>
@@ -25,28 +26,29 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="bodi w3-display-container"style="width:100%; height:100%;">
-      <div class="ptext w3-top w3-display-topleft w3-padding-large w3-xlarge">
+    <div class="bodi">
+      <div id="title-div" class="head">
         <p class="w3-text-light-grey">Quote Generator</p>
       </div>
-      <br>
-      <div id="quotes" class="quote-box" style="width:100%; height:auto;">
-        <div class="quote-item" >
-          <p id="quote-holder"> You are the sum of all your daily actions</p>
-          <p id="author-holder"> Bob globTrotter</p>
+      <div id="mid-div" class="">
+        <div id="quotes" class="quote-box myCaroussel" style="max-width:90%;">
+          <div class="quote-item" >
+            <p id="quote-holder"> You are the sum of all your daily actions</p>
+            <p id="author-holder"> Bob globTrotter</p>
+          </div>
         </div>
       </div>
-      <footer id="buttons">
-          <div class="w3-third">
-            <button class="w3-white w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-          </div>
-          <div id="share-button" class="w3-third">
+      <div id="footer-div" class="bottom">
+        <div class="w3-third">
+          <button class="w3-white w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        </div>
+        <div id="share-button" class="w3-third">
 
-          </div>
-          <div class="w3-third">
-            <button class="w3-white w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-          </div>
-      </footer>
+        </div>
+        <div class="w3-third">
+          <button class="w3-white w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+      </div>
     </div>
 
 

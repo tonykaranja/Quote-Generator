@@ -4,72 +4,76 @@ body {
   font-size: 100%;
 }
 
-#myCarousel {
-  object-fit: fill;
-  position: absolute;
-  width: 90%;
-  min-height: 100%;
-  background-color: inherit;
-}
-
-#buttons {
-  position: relative;
-  padding: 40px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.ptext {
-  margin-bottom: 20%
-}
-
-.quote-box {
-  border-radius: 3px;
-  position: static;
-  margin: 20% auto 20% auto;
-  width: 450px;
-  padding: 50% 50px;
-  display: table;
-  background-color: inherit;
-
-}
-
 .bodi {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
+  float:left;
+  width:100%;
+
+  margin: 0;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+
+  background-image: url("/images/flower-shower-fade.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/images/flower-shower.jpeg");
-  /*min-height: 100%;*/
   background-attachment: fixed;
 }
 
+.head {
+  font-family: 'Playfair Display SC', serif;
+  font-size:24px;
+}
+
+
+#footer-div {
+  padding: 12px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: inherit;
+  order: 3;
+  z-index:1
+}
+
+.head, .bottom {
+  height: 0.125vh;
+}
+
+#mid-div {
+  height: 0.75vh;
+  width: 80vh;
+
+  flex-grow: 2;
+  order: 2;
+
+  overflow: hidden;
+  display: inline-block;
+  width: auto;
+
+  text-align:center
+
+}
+
 .quote-item {
-  display: none;
-  font-size: 1.5em;
+  /*display: none;*/
+  font-size: 1.75em;
   font-family: 'Shadows Into Light Two', cursive;
   color:#fff;
+  flex-basis: auto;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.quote-box {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%)
 }
