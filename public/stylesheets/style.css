@@ -67,11 +67,11 @@ body {
   font-size: 1.75em;
   font-family: 'Shadows Into Light Two', cursive;
   color:#fff;
-  flex-basis: auto;
+
 }
 
 .quote-box {
-  position:absolute;
+  position:relative;;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
