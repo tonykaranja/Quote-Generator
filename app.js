@@ -32,7 +32,7 @@ app.get('/',function(req,res){
 });
 
 app.get('/index2',function(req,res){
-  res.sendFile(path.join(__dirname+'/old-index.html'));
+  res.sendFile(path.join(__dirname+'/fenix.html'));
   //__dirname : It will resolve to your project folder.
 });
 

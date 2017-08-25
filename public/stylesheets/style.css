@@ -1,34 +1,48 @@
-body, html {height: 100%}
-* {box-sizing:border-box}
+body, html {height: 100%; width:100%; margin:0; padding:0;}
 
-.slideshow-container {
-  max-width: 100%;
+#myCarousel {
+  object-fit: fill;
+  position: absolute;
+  width: 90%;
+  min-height: 100%;
+  background-color: inherit;
+}
+
+#buttons {
   position: relative;
-  margin: auto;
+  padding: 40px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.ptext {
+  margin-bottom: 20%
+}
+
+.quote-box {
+  border-radius:3px;
+  position: inherit;
+  margin:20% auto 20% auto;
+  width:450px;
+  padding:50% 50px;
+  display:table;
+  background-color:#fff;
+
+}
+
+.bodi {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/images/beach-palms.jpg");
+  min-height: 100%;
+  background-attachment: fixed;
 }
 
 .quote-item {
   display: none;
 }
-
-/*.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}*/
-
-/* Position the "next button" to the right */
-/*.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}*/
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {

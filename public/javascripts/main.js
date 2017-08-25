@@ -2,9 +2,6 @@ $(document).ready(function(){
 
   carouselFiller();
 
-
-
-
 });
 
 function carouselFiller() {
@@ -16,7 +13,7 @@ function carouselFiller() {
       quoteData += '<p>' + value.author + '</p>'
       quoteData += '</div>'
     })
-    $('#things').append(quoteData)
+    $('#quotes').append(quoteData)
   });
 }
 
